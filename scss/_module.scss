@@ -3,3 +3,70 @@ Module Rules
     A Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component. In doing so, the page will be more flexible. If done right, Modules can easily be moved to different parts of the layout without breaking.
     When defining the rule set for a module, avoid using IDs and element selectors, sticking only to class names. A module will likely contain a number of elements and there is likely to be a desire to use descendent or child selectors to target those elements. 
 */
+
+header[role="header"] {
+    background-color: $header-color;
+    margin: auto;
+    padding: auto;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: lighten($text-color, 10%);
+}
+
+.nav {
+    margin: auto;
+    padding: 5px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    display: inline-block;
+    list-style-type: none;
+}
+
+.headline {
+    background: $header-color;
+    margin: 0;
+    margin-top: 0;
+    padding: 5px;
+}
+
+//social icons
+
+.contact {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.contact ul li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.contact svg {
+    float: center;
+    width: 30px;
+    height: 30px;
+}
+
+.contact svg path { 
+    fill: $background-color;
+    transition: fill 400ms linear;
+}
+
+.contact a:hover svg path { 
+    fill: lighten($grid, 12%);
+    transition: fill 400ms linear;
+}
+
